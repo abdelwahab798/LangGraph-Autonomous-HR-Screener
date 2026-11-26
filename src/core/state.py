@@ -1,4 +1,3 @@
-from langgraph.graph import StateGraph, START, END
 from typing import TypedDict, List, Annotated
 from operator import add
 
@@ -21,6 +20,10 @@ class WorkerState(TypedDict):
     itreations_num : int
     is_accepted:bool
 
+# optimize
+    eval_overall_score:int
+    strengths:list[str]
+    weaknesses:list[str]
 # if rejection
     rejection_email:str
 
